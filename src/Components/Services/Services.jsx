@@ -3,10 +3,10 @@ import "./Services.css";
 import { motion } from "framer-motion";
 
 const servicesData = [
-  { title: "Hair Styling", description: "Professional hair styling services.", image: "public/images/hair-styling.jpg" },
-  { title: "Makeup", description: "Expert makeup for all occasions.", image: "public/images/makeup.jpg" },
-  { title: "Manicure & Pedicure", description: "Luxury nail treatments.", image: "public/images/Manicure_Pedicure.jpeg" },
-  { title: "Facials", description: "Rejuvenating facial treatments.", image: "public/images/facials.jpg" },
+  { title: "Hair Styling", description: "Professional hair styling services.", image: "/images/hair-styling.jpg" },
+  { title: "Makeup", description: "Expert makeup for all occasions.", image: "/images/makeup.jpg" },
+  { title: "Manicure & Pedicure", description: "Luxury nail treatments.", image: "/images/Manicure_Pedicure.jpeg" },
+  { title: "Facials", description: "Rejuvenating facial treatments.", image: "/images/facials.jpg" },
 ];
 
 const Services = () => {
