@@ -1,0 +1,154 @@
+/* Navbar.css */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    color: white;
+    z-index: 1000;
+    transition: 0.3 ease-in-out;
+  }
+  .navbar .logo{
+    font-size: 20px;
+    font-weight: bold;
+    color: pink;
+    flex-grow: 1;
+  }
+  .navbar a {
+    color: white;  /* Make text visible */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  
+  
+  .navbar.scrolled {
+    background-color:black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.041);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ec4899, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .logo-container {
+    text-align: right;
+}
+
+  
+  .menu {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu li {
+    list-style: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .menu li:hover {
+    color: #ec4899;
+  }
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    margin-left: auto;
+    width: 50%;
+  }
+  
+  
+  .mobile-menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .hamburger {
+    font-size: 24px;
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+    }
+    .hamburger{
+        display: block;
+        margin-left: auto;
+    }
+  
+    .mobile-menu-icon {
+      display: block;
+    }
+    .container{
+        width: 85%;
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: black;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .navbar{
+        padding: 15px 20px;
+      }
+      .navbar .logo{
+        flex-grow: 1;
+        text-align: left;
+        text-align: left;
+      }
+      .logo{
+        margin-right: 5%;
+      }
+    
+  
+    .mobile-menu {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+  
+    .mobile-menu li {
+      padding: 10px 0;
+      font-size: 18px;
+    }
+    .nav-links.open {
+        display: flex;
+      }
+    
+    
+  }
+  
