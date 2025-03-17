@@ -1,18 +1,33 @@
 /* Hero.css */
 .hero {
     height: 100vh;
-    background: url("/images/hero-bg.jpg") center/cover no-repeat;
+    background: url('/images/hero-bg.jpg') no-repeat center center fixed;
+    background-position:center; 
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color:white;
     padding: 20px;
     position: relative;
     margin-top: 80px;
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;   
+     margin-top: 80px;
   }
-  
+  section, div {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
   
     .hero::before {
         content: "";
@@ -29,6 +44,7 @@
   .hero-content {
     position: relative;
   z-index: 2;
+  width: 100%;
   }
   
   .gradient-text {
