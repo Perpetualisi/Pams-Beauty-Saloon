@@ -61,8 +61,8 @@ const Contact = () => {
           className="phone-email"
         >
           <h3>Contact Information</h3>
-          <p>Phone: +234-810-355-8837</p>
-          <p>Email: <a href="mailto:perpetualokan0@gmail.com">perpetualokan0@gmail.com</a></p>
+          <p>Phone: +234-773-345-6786</p>
+          <p>Email: <a href="mailto:pambeautysaloon@gmail.com">pambeautysaloon@gmail.com</a></p>
         </motion.div>
 
         <motion.div 
