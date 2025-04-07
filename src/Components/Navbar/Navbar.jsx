@@ -19,7 +19,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -33,15 +32,13 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          PAMS BEAUTY SALOON
+          PAMS
         </motion.h1>
 
-    
         <div className="hamburger" onClick={toggleMenu}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </div>
 
-        
         <ul className={isOpen ? "nav-links open" : "nav-links"}>
           <li><a href="#hero" onClick={toggleMenu}>Home</a></li>
           <li><a href="#about" onClick={toggleMenu}>About</a></li>

@@ -42,6 +42,41 @@ const Contact = () => {
       </motion.form>
 
       {successMessage && <motion.p className="success-message" animate={{ opacity: [0, 1, 0] }} transition={{ duration: 2 }}>{successMessage}</motion.p>}
+
+      <div className="contact-details">
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.5 }}
+          className="address"
+        >
+          <h3>Our Address</h3>
+          <p>123 Beauty Lane, Lagos, Nigeria</p>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.5 }}
+          className="phone-email"
+        >
+          <h3>Contact Information</h3>
+          <p>Phone: +234-810-355-8837</p>
+          <p>Email: <a href="mailto:perpetualokan0@gmail.com">perpetualokan0@gmail.com</a></p>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.5 }}
+          className="hours"
+        >
+          <h3>Working Hours</h3>
+          <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+          <p>Saturday: 10:00 AM - 4:00 PM</p>
+          <p>Sunday: Closed</p>
+        </motion.div>
+      </div>
     </section>
   );
 };

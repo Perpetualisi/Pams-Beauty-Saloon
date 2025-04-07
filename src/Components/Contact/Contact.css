@@ -1,85 +1,111 @@
-/* Contact Section Styling */
-.contact-container {
-    max-width: 1200px;
-    margin: auto;
+/* General section styling */
+.contact {
     padding: 50px 20px;
     text-align: center;
-}
-
-.contact-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: fadeInUp 1s forwards;
-}
-.contact-section {
-    margin-bottom: 50px; /* Adjust as needed */
+    background-color: #f8f8f8;
   }
   
-
-.contact-form {
+  .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  
+  /* Form styling */
+  .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    gap: 20px;
     max-width: 500px;
-    margin: auto;
-}
-
-.contact-form input,
-.contact-form textarea {
+    margin: 0 auto;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
     width: 100%;
-    padding: 12px;
-    border: 2px solid #ccc;
+    padding: 15px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #ff69b4;
-    outline: none;
-}
-
-.contact-form button {
-    background: #ff69b4;
+    font-size: 16px;
+    background-color: #fff;
+  }
+  
+  .contact-form button {
+    padding: 15px 30px;
+    background-color: #ec4899;
     color: white;
-    padding: 12px;
+    font-weight: bold;
     border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
     border-radius: 5px;
-}
-
-.contact-form button:hover {
-    background: #e05594;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #9333ea;
+  }
+  
+  /* Success message styling */
+  .success-message {
+    font-size: 18px;
+    color: green;
+    margin-top: 20px;
+  }
+  
+  /* Contact details section styling */
+  .contact-details {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .contact-details .address,
+  .contact-details .phone-email,
+  .contact-details .hours {
+    text-align: center;
+  }
+  
+  .contact-details h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .contact-details p {
+    font-size: 18px;
+    color: #777;
+  }
+  
+  .contact-details a {
+    color: #9333ea;
+    text-decoration: none;
+  }
+  
+  .contact-details a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .contact-form {
+      width: 90%;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+  
+    .contact-details {
+      gap: 20px;
     }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-container {
-        padding: 30px 10px;
+  
+    .contact-details h3 {
+      font-size: 20px;
     }
-
-    .contact-title {
-        font-size: 1.5rem;
+  
+    .contact-details p {
+      font-size: 16px;
     }
-
-    .contact-form button {
-        font-size: 0.9rem;
-    }
-}
+  }
+  

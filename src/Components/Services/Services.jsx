@@ -1,6 +1,6 @@
-import React from "react";
-import "./Services.css";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import "./Services.css";
 
 const servicesData = [
   { title: "Hair Styling", description: "Professional hair styling services.", image: "/images/hair-styling.jpg" },
@@ -10,6 +10,16 @@ const servicesData = [
 ];
 
 const Services = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % servicesData.length);
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval); // Clean up interval on component unmount
+  }, []);
+
   return (
     <section className="services" id="services">
       <motion.h2
@@ -20,23 +30,31 @@ const Services = () => {
       >
         Our Services
       </motion.h2>
-      
+
       <div className="services-container">
-        {servicesData.map((service, index) => (
+        <motion.div
+          className="service-slider"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <motion.div
-            key={index}
+            key={servicesData[currentIndex].title}
             className="service-card"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            transition={{ duration: 0.5 }}
           >
-            <img src={service.image} alt={service.title} className="service-image" />
-            <h3 className="service-title">{service.title}</h3>
-            <p className="service-description">{service.description}</p>
+            <img
+              src={servicesData[currentIndex].image}
+              alt={servicesData[currentIndex].title}
+              className="service-image"
+            />
+            <h3 className="service-title">{servicesData[currentIndex].title}</h3>
+            <p className="service-description">{servicesData[currentIndex].description}</p>
           </motion.div>
-        ))}
+        </motion.div>
       </div>
-      
     </section>
   );
 };

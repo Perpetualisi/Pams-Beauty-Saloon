@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll"; // Updated import for smooth scroll
 import "./Hero.css";
-import { Link } from "react-router-dom";
-
 
 const Hero = () => {
   return (
@@ -23,18 +22,23 @@ const Hero = () => {
         >
           Experience luxury beauty services with us!
         </motion.p>
-        <Link to="contact" smooth={true} duration={500}>
-
-        <motion.button 
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="book-btn"
+        
+        {/* Updated Link to use react-scroll for smooth scrolling */}
+        <Link 
+          to="contact" 
+          smooth={true} 
+          duration={500} 
+          className="book-now-link"
         >
-          Book Now
-        </motion.button>
+          <motion.button 
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="book-btn"
+          >
+            Book Now
+          </motion.button>
         </Link>
       </div>
-      
     </section>
   );
 };
