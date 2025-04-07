@@ -1,5 +1,22 @@
-/* Hero.css */
+/* Reset and ensure proper box-sizing for all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* HTML and Body styling to prevent shaking */
+html,
+body {
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'Arial', sans-serif; /* Set a default font */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Hero Section Styling */
 .hero {
   height: 100vh; /* Ensures full viewport height */
   width: 100vw; /* Ensures full width */
@@ -10,21 +27,26 @@
   justify-content: center;
   text-align: center;
   color: white;
-  padding: 20px;
+  padding: 0 20px; /* Padding for responsiveness */
   position: relative;
   overflow: hidden;
+  background-position: center center; /* Ensures proper positioning of the background */
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
-/* Ensures no unwanted margins and overflow */
-section, div {
-  max-width: 100%;
-  overflow: hidden;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* Ensure image stays behind the text */
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the space without stretching */
+  position: absolute; /* Keeps the image behind the text */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Keeps the image behind the text */
 }
 
 /* Dark overlay */
@@ -43,7 +65,11 @@ img {
 .hero-content {
   position: relative;
   z-index: 2;
+  text-align: center; /* Centering text horizontally */
+  padding: 0 20px; /* Padding for better spacing */
   width: 100%;
+  max-width: 100%; /* Full width to allow text to fit */
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
 }
 
 .gradient-text {
@@ -79,15 +105,21 @@ img {
 /* Responsive Design */
 @media (max-width: 768px) {
   .gradient-text {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .hero p {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 
   .book-btn {
-      font-size: 1rem;
-      padding: 10px 20px;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  /* Hero content adjustments for mobile */
+  .hero-content {
+    padding: 0 15px; /* Adjust padding on smaller screens */
+    text-align: center;
   }
 }

@@ -8,10 +8,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background: rgba(0, 0, 0, 0.7); */
+  background: black;
   color: white;
   z-index: 1000;
-  transition: 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, height 0.3s ease-in-out; /* Added transition for smooth background change */
   max-width: 100vw;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -36,9 +36,10 @@
 
 /* Navbar scrolled state */
 .navbar.scrolled {
-  background-color: black;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 50px;
+  background-color: rgba(0, 0, 0, 0.7); /* Change to a dark background when scrolling */
+  color: white;
+  height: 50px; /* Optional: Adjust navbar height on scroll */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Stronger shadow on scroll */
 }
 
 /* Container for navbar items */
@@ -66,12 +67,14 @@
   color: #ec4899;
 }
 
-/* Hamburger icon styling */
 .hamburger {
   font-size: 25px;
   display: none;
   cursor: pointer;
   margin-left: auto;
+  position: absolute; /* Position it absolutely */
+  top: 15px; /* Move it 15px from the top */
+  right: 20px; /* Move it 20px from the right edge */
 }
 
 /* Mobile Styles */
@@ -93,6 +96,7 @@
   /* Show hamburger menu icon on mobile */
   .hamburger {
     display: block;
+    right: 5px;
   }
 
   /* Show the menu when toggled */
